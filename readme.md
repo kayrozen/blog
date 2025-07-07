@@ -2,6 +2,8 @@
 
 A beautiful, responsive web application for viewing and displaying blog posts from the ATprotocol ecosystem using Whitewind Blog entries. This viewer allows you to create a personalized blog website that reads directly from your ATprotocol blog data.
 
+See it in action here : https://kayrozen.github.io/blog/
+
 ## Features
 
 ✨ **Beautiful Design**
