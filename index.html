@@ -1021,7 +1021,19 @@
                 document.getElementById('handleDisplay').textContent = handle;
                 document.getElementById('pdsDisplay').textContent = pds;
                 document.getElementById('postsCount').textContent = postsCount;
-                document.getElementById('lastUpdate').textContent = new Date().toLocaleDateString('en-US');
+                
+                // Show the date of the most recent post 
+                let lastUpdateText = 'No posts yet';
+                if (this.allPosts && this.allPosts.length > 0) {
+                    const mostRecentPost = this.allPosts[0]; // Already sorted by date desc
+                    const lastUpdateDate = new Date(mostRecentPost.createdAt);
+                    lastUpdateText = lastUpdateDate.toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
+                }
+                document.getElementById('lastUpdate').textContent = lastUpdateText;
                 
                 this.blogInfo.style.display = 'block';
             }
